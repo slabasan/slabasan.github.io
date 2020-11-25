@@ -1,0 +1,156 @@
+h1#name {
+	font-family: 'Croissant One';
+	font-size: 30px;
+	text-align: center;
+}
+
+a#backtohome {
+	text-decoration: none;
+	color: #000000;
+}
+
+h2#sub {
+	font-family: 'Trykker';
+	font-size: 25px;
+	margin-top: -35px;
+	text-align: center;
+}
+
+hr {
+	margin-top: -10px;
+}
+
+h4#update {
+	font-family: 'Trykker';
+	font-size: 12px;
+	width: 800;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#links {
+	font-family: 'Trykker';
+	font-size: 18px;
+	text-align: center;
+	padding: 0;
+	margin: 0
+	padding: 6px;
+}
+
+div#top {
+	width: 600;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a.links {
+	text-decoration: none;
+	text-align: center;
+	color: #000000;
+	/*background-color: #6CAA33;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr#mainrow {
+	text-align: center;
+}
+
+td#col1 {
+	padding-right: 7px;
+}
+
+td#col2 {
+	padding-left: 7px;
+}
+
+tr#row {
+	text-align: justify;
+}
+
+div#table {
+	width: 800;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#bio {
+	font-family: 'Trykker';
+	font-size: 16px;
+	padding-top: 1px;
+	line-height: 1.3;
+}
+
+a#dept {
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Trykker';
+}
+
+a#univ {
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Trykker';
+}
+
+a#advisor {
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Trykker';
+}
+
+a#uop {
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Trykker';
+}
+
+a#cdux {
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Trykker';
+}
+
+a#course {
+	text-decoration: none;
+	color: #000000;
+	font-family: 'Trykker';
+	border-bottom: dotted;
+}
+
+div#contact {
+	font-family: 'Trykker';
+	width: 800;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#research {
+	font-family: 'Trykker';
+	font-size: 16px;
+}
+
+p#header {
+	font-weight: bold ;
+	font-style: italic;
+	margin-bottom: -15px;
+	font-size: 20px;
+}
+
+p#contactheader {
+	font-weight: bold;
+	font-style: italic;
+	margin-bottom: 0px;
+	font-size: 18px;
+}
+
+p#bioheader {
+	font-weight: bold;
+	font-style: italic;
+	margin-bottom: 0px;
+	font-size: 22px;
+}
+
+li {
+	margin-bottom: 3px;
+}

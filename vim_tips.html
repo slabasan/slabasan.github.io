@@ -1,0 +1,593 @@
+<html>
+
+<head>
+  <title>Stephanie Brink</title>	<!--title of tab-->
+  <link rel="stylesheet" href="Style.css" type="text/css"/>
+  <link href='//fonts.googleapis.com/css?family=Croissant+One:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Trykker:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="top">
+  <h1 id="name"><a id="backtohome" href="index.html">Stephanie Brink</a></h1>
+  <!--<h2 id="sub">Computer Scientist at Lawrence Livermore National Laboratory</h2>-->
+  <hr>
+
+  <div id="links">
+          <a class="links" href="./index.html">Home&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+          <!--<a class="links" href="./courses.html">Courses&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>-->
+          <a class="links" href="./research.html">Research&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+          <a class="links" href="./webdocs/BrinkCV.pdf">CV&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a class="links" href="./vim_tips.html">Vim&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+  </div>
+  </div>
+
+  <br>
+
+  <div id="table">
+    <table>
+      <tr id="row">
+        <td>
+			<div id="research">
+
+            <p id="header">Table of Contents</p>
+			<ul>
+				<li><a href="vim_tips.html#commands">Commands At-A-Glance</a></li>
+				<li><a href="vim_tips.html#modes">Overview of Vim Modes</a></li>
+				<li><a href="vim_tips.html#basics">Basic Tips</a></li>
+				<li><a href="vim_tips.html#tips">Tips in 3 Weeks</a></li>
+				<li><a href="vim_tips.html#favorites">Favorite Tips</a></li>
+				<li><a href="vim_tips.html#advanced">Advanced Tips</a></li>
+				<li><a href="vim_tips.html#resources">Other Resources</a></li>
+			</ul>
+
+            <a name="commands"></a>
+			<table style="width:100%" border="1px solid black" border-collapse="collapse">
+  		      <tr>
+  		        <th width="10%">Command</th>
+  		        <th width="40%">Notes</th>
+  		        <th width="10%">Command</th>
+  		        <th width="40%">Notes</th>
+  		      </tr>
+  		      <tr>
+  		        <th>.</th>
+  		        <td>Repeat last operation entered in any mode</td>
+  		        <th>*</th>
+  		        <td>Search for string under cursor</td>
+  		      </tr>
+  		      <tr>
+  		        <th>0</th>
+  		        <td>Jump to beginning of line</td>
+  		        <th>$</th>
+  		        <td>Jump to end of line</td>
+  		      </tr>
+  		      <tr>
+  		        <th>h</th>
+  		        <td>Move cursor one character to left</td>
+  		        <th>l</th>
+  		        <td>Move cursor one character to right</td>
+  		      </tr>
+  		      <tr>
+  		        <th>j</th>
+  		        <td>Move cursor down a line</td>
+  		        <th>k</th>
+  		        <td>Move cursor up a line</td>
+  		      </tr>
+  		      <tr>
+  		        <th>i</th>
+  		        <td>Enter insert mode</td>
+  		        <th>I</th>
+  		        <td>Enter text at beginning of line</td>
+  		      </tr>
+  		      <tr>
+  		        <th>a</th>
+  		        <td>Insert to right of cursor</td>
+  		        <th>A</th>
+  		        <td>Append to end of line</td>
+  		      </tr>
+  		      <tr>
+  		        <th>dw</th>
+  		        <td>Delete text from cursor to next punctuation or space</td>
+  		        <th>dW</th>
+  		        <td>Delete text from cursor to space</td>
+  		      </tr>
+  		      <tr>
+  		        <th>o</th>
+  		        <td>Insert new line below cursor</td>
+  		        <th>O</th>
+  		        <td>Insert new line above cursor</td>
+  		      </tr>
+  		      <tr>
+  		        <th>:vsplit</th>
+  		        <td>Vertically split screen</td>
+  		        <th>:split</th>
+  		        <td>Horizontally split screen</td>
+  		      </tr>
+  		      <tr>
+  		        <th>ctrl+w ctrl+w</th>
+  		        <td>Jump between screen in split mode</td>
+  		        <th>:only</th>
+  		        <td>Exit from split screen mode</td>
+  		      </tr>
+  		      <tr>
+  		        <th>ctrl+g</th>
+  		        <td>Show filename at bottom</td>
+  		        <th>:e</th>
+  		        <td>Get latest version of file</td>
+  		      </tr>
+  		      <tr>
+  		        <th>:set paste</th>
+  		        <td>Paste text as is. Otherwise, lots of tabs inserted.</td>
+  		        <th>:set nopaste</th>
+  		        <td>Unset paste feature</td>
+  		      </tr>
+  		      <tr>
+  		        <th>:set nu</th>
+  		        <td>Turn on line numbers</td>
+  		        <th>:set nonu</th>
+  		        <td>Disable line numbers</td>
+  		      </tr>
+  		      <tr>
+  		        <th>:1,10d</th>
+  		        <td>Delete lines 1 through 10</td>
+  		        <th>%</th>
+  		        <td>Jump to matching braket</td>
+  		      </tr>
+  		      <tr>
+  		        <th>gd</th>
+  		        <td>Jump to local definition</td>
+  		        <th>gD</th>
+  		        <td>Jump to global definition</td>
+  		      </tr>
+			</table> 
+
+            <a name="modes"><p id="header">Vim Modes</p></a>
+			<ul>
+				<li><u>Command Mode</u>:
+					This is the default mode when opening a file for the first
+					time. From here, you cannot enter text without first
+					entering Insert mode. From this mode, you can issue navigation 
+					search, insert, open, or append commands (see Navigation
+					under Basics: Command Mode).  
+				</li>
+				<li><u>Insert Mode (i)</u>:
+					Access this mode by issuing an insert, open, or append
+					command. From here, you can directly input text into the
+					file or use the arrow keys to navigate the file. In other
+					words, Insert mode in Vim looks very much like any other
+					text editor. Press the Esc key to return to Command Mode.
+				</li>
+				<li><u>Last Line Mode (:)</u>:
+				Access this mode by pressing the colon : key. In this mode, you
+				can search for a particular string, use regular expressions to
+				search and replace, save file and quit Vim session, open
+				additional files, jump to a specific line, and more.
+				</li>
+			</ul>
+
+            <a name="basics"><p id="header">Basics: Command Mode</p></a>
+			<ul>
+				<li><u>Navigation</u>:
+					<ul>
+						<li>j = Move cursor down 1 line</li>
+						<li>k = Move cursor up 1 line</li>
+						<li>h = Move cursor left 1 character</li>
+						<li>l = Move cursor right 1 character</li>
+						<li>w = Move cursor right 1 word (punctuation considered a word)</li>
+						<li>b = Move cursor left 1 word</li>
+						<li>W = Move cursor right 1 word (spaces separate words)</li>
+						<li>B = Move cursor left 1 word (spaces separate words)</li>
+						<li>$ = Move cursor to end of line</li>
+						<li>0 (numeric zero) = Move cursor to beginning of line</li>
+						<li>gg = Move cursor to first line in the file</li>
+						<li>G = Move cursor to last line in the file</li>
+						<li>ctrl+f = Scroll page down towards end of file</li>
+						<li>ctrl+b = Scroll page up towards top of file</li>
+					</ul>
+				</li> 
+				<li><u>Insert</u>:
+				Press the i key to enable text insertion before the current
+				cursor location. Pressing I will enable text insertion at the
+				beginning of the current line. Navigating a file in this
+				mode requires use of the arrow keys, as keys in this mode will
+				operate as normal. Return to Command Mode with the Esc key.
+				</li>
+				<li><u>Append</u>:
+				Press the a key to append to current cursor location. If you
+				want to add text to the end of a line, you can move your cursor
+				to the last character of the line, then press a. OR, you can
+				press A to automatically move the cursor to the end of the line
+				and enter Insert Mode. Return to Command Mode with the Esc key.  
+				</li>
+				<li><u>Open</u>:
+				Press o to insert a new line above the cursor. Press shift+o to
+				insert a new line below the cursor. Return to Command Mode with
+				the Esc key.  
+				</li>
+				<li><u>Delete Chars, Words, Lines</u>:
+					<ul>
+						<li>x = Delete single character under cursor</li>
+						<li>dw = Delete a single word (punctuation considered a
+						word).</li>
+						<li>dW = Delete a single word (spaces separate
+						words)</li> 
+						<li>dd = Delete current line</li>
+						<li>Ad = Delete line number A
+						<li>A,Bd = Delete lines in range A to B</li>
+					</ul>
+				</li>
+				<li><u>Copy a Line or Multiple Lines</u>: 
+				Press yy to copy the current line and
+				1,10y to copy lines 1 through 10. Move cursor to desired
+				location, and press p to paste the line(s) below the current
+				cursor location and P to paste the line(s) above.
+					<ul>
+						<li>yy = Copy current line</li>
+						<li>Ayy = Copy line number A</li>
+						<li>A,By = Copy lines in range A to B</li>
+					</ul>
+				<li><u>Replace</u>:
+					<ul>
+						<li>rX = Replace single character under cursor with
+						letter, punctuation, or number specified by X</li>
+						<li>R = Replace continuous set of characters. Exit with
+						Esc key.</li> 
+					</ul>
+				</li>
+				<li><u>Delete and Insert</u>: 
+				Use the s key to delete a specific number of characters and
+				automatically enter Insert Mode (one less step than using the x
+				key followed by i). Use c to delete a word and automatically
+				enter Insert Mode.
+					<ul>
+						<li>s = Delete single character under cursor and
+						automatically enter Insert Mode</li>
+						<li>Xs = Delete X characters from cursor and
+						automatically enter Insert Mode, where X is a numeric
+						value</li>
+						<li>cw = Delete single word (punctuation considered a
+						word) and automatically enter Insert Mode</li>
+						<li>cW = Delete single word (spaces separate words) and
+						automatically enter Insert Mode</li>
+					</ul>
+				</li>
+				<li><u>Cut and Paste Lines</u>: 
+				Press dd or A,Bd to delete (and
+				subsequently, cut) the current line or a range of lines. These
+				become stored in your Vim buffer. If you want to paste those
+				lines somewhere else, you must not issue any other commands in
+				Insert or Command Mode, which will remove the previously
+				deleted lines from the buffer. Press p to paste the cut line(s)
+				below the cursor position and P to paste them above.
+				</li>
+			</ul>
+
+            <p id="header">Basics: Insert Mode</p>
+			<ul>
+				<li><u>Paste Code Unmodified</u>:
+				In some cases if you copy example code from a webpage, and
+				paste it in Vim insert mode, Vim will paste text unexpectedly
+				and incorrectly indent several lines. Use the paste option to
+				paste unmodified code from outside applications, such as the
+				Internet. Use :set paste to put Vim in Paste Mode. Use 
+				:set nopaste to exit Paste Mode.
+				</li>
+			</ul>
+
+            <p id="header">Basics: Last Line Mode</p>
+			<ul>
+				<li><u>Saving File</u>:
+				Press :w to save the file with the current filename. If you'd
+				rather save the file under a different name, press 
+				:w <filename>.
+				</li> 
+				<li><u>Quit Vim Session</u>:
+				Press :q to terminate the current Vim session. If there are
+				unsaved local changes to the current file, Vim will issue a 
+				warning indicating that there are changes. If you want to
+				discard any changes, press :q!. Otherwise, press :w first to
+				save the file.  
+				</li> 
+				<li><u>Write and Quit</u>:
+				You can combine the above two commands by pressing :wq, where w
+				indicates saving the file with the current filename, and q
+				indicates ending the Vim session. You can still save to a
+				different filename and quit the Vim session simultaneously by
+				pressing :wq <filename>.  
+				</li> 
+			</ul>
+
+            <a name="tips"><p id="header">Vim Tips in 3 Weeks</p></a>
+			<ul>
+				<li>Tip #1: Remap esc key to caps lock</li>
+				<li>Tip #2: "." feature</li>
+				<li>Tip #3: Visual mode and visual block mode</li>
+				<li>Tip #4: Opening multiple files</li>
+				<li>Tip #5: Jump between brackets</li>
+				<li>Tip #6: Suspend Vim session</li>
+				<li>Tip #7: Quickly delete contents enclosed in braces</li>
+				<li>Tip #8: Jump to definition</li>
+				<li>Tip #9: Delete word, delete chars</li>
+				<li>Tip #10: Searching within a file</li>
+				<li>Tip #11: Jumping to specific line</li>
+				<li>Tip #12: Paste code into file</li>
+				<li>Tip #13: Delete all contents in Vim</li>
+				<li>Tip #14: Access man pages</li>
+				<li>Tip #15: Comment out multiple lines of code</li>
+				<li>Tip #16: Indent multiple lines</li>
+				<li>Tip #17: Auto-formatting based on vimrc file</li>
+				<li>Tip #18: Search and replace using cursor location as reference point</li>
+				<li>Tip #19: Opening additional files</li>
+				<li>Tip #20: Combine two lines with shift+j</li>
+				<li>Tip #21: Toggle between upper and lower case</li>
+			</ul>
+
+            <a name="favorites"><p id="header">Favorites</p></a>
+			<ul>
+				<li><u>Quickly Delete Contents Enclosed in Brackets</u>:
+				To delete all contents enclosed between brackets, such as a
+				function definition between curly brackets, for loop conditions
+				in parentheses, C++ templating in angle brackets, or even a
+				long string contained between quotation marks, use di
+				(stands for delete inside) immediately followed by the open or
+				closed bracket that contains the text you wish to delete.
+				</li>
+				<li><u>Search and Replace Using Cursor Location</u>:
+				Instead of using a range of line numbers for regular
+				expressions, you can also use the cursor location. Say you want
+				to insert a comment from line 50 to the last line. You can
+				issue :.,$s/^/#/.  Here, the "." indicates current line, and
+				the dollar symbol ($) indicates the last line. Note that the
+				"." and $ symbols are still separated by a comma, much like
+				when you're using a range of line numbers. To add a comment to
+				the current line and the next 9 lines (i.e., add a comment to
+				10 lines total), use :.,+9s/^/#/. To apply to the current line
+				and the previous 9 lines, use :.,-9s/^/#/.
+				</li>
+				<li><u>Visual Block Mode</u>:
+				Seamlessly delete, add, or modify a single column in a text
+				file. Enter this mode with ctrl+v.
+				</li>
+			</ul>
+
+            <a name="advanced"><p id="header">Advanced: Command Mode</p></a>
+			<ul>
+				<li><u>Join Two Lines</u>:
+				Press J to join two lines together. More
+				specifically, this command will append the next line with the
+				current line from where this command was executed. Could also
+				be achieved by entering Insert Mode, then using the Delete or
+				Backspace key.  
+				</li>
+				<li><u>Jump Between Matching Brackets</u>:
+				Use shift+5 (%) to move the cursor between matching sets of
+				brackets. This could be used to ensure you've closed the
+				brackets on your for loop or to find the matching bracket of a
+				function that doesn't fit in the Vim window.
+				</li>
+				<li><u>Searching Within a File</u>:
+				To search for a string from current location to the bottom of
+				the file, press /string, followed by the Enter key. To search
+				from bottom to top, use ?string. There are various settings in
+				your .vimrc that can highlight matching strings, or that will
+				dynamically move the cursor from through your file as your type
+				your search. Use n to advance to the next match, and use N to
+				go back to the previous match. Use g* to search the word under
+				the cursor.
+				</li>
+				<li><u>Delete Chars</u>:
+				Use Xd, where X is the number of characters to delete from the
+				current cursor location. Use Xs to delete X number of
+				characters and automatically be placed in Insert Mode.
+				</li>
+				<li><u>"." Command</u>: 
+				This command simplifies your ability to repeat commands without
+				retyping them for each occurrence. The "." command repeats the
+				last change made in regular mode, such as deleting a word (dw)
+				or inserting a word in Insert Mode.
+				</li>
+				<li><u>Jump to Definition</u>:
+				Move cursor to a variable instance or function call, then press
+				gD to move your cursor to the global defintion, and gd to move
+				to the local declaration.
+				</li>
+				<li><u>Indent Single Line or Block of Lines</u>:
+				Double tap the greater than (>) or less than (<) symbols to
+				indent or un-indent a line, respectively. To indent or un-indent
+				a block of lines, add any number before the greater than or
+				less than symbols. This number indicates how many lines from
+				the current lines you wish you indent or unindent.
+				</li>
+				<li><u>Quickly Delete Contents Enclosed in Brackets</u>:
+				To delete all contents enclosed between brackets, such as a
+				function definition between curly brackets, for loop conditions
+				in parentheses, C++ templating in angle brackets, or even a
+				long string contained between quotation marks, use di
+				(stands for delete inside) immediately followed by the open or
+				closed bracket that contains the text you wish to delete.
+				</li>
+				<li><u>Toggle Between Upper and Lower Case</u>:
+				Quickly toggle a character between upper and lower case by
+				pressing the ~ key (shift+`). Repeatedly press this key across
+				an entire word, and Vim will automatically advance your cursor
+				from one character to the next. If there is a blank character
+				(or space), the toggling will do nothing, but advance your 
+				cursor.
+				</li>
+				<li><u>Recording</u>:
+				I have never used this feature, but something I always found
+				myself in when I was learning Vim, and couldn't figure out how
+				I activated it. If you press the q key followed by any letter
+				[a-z], subsequent keystrokes will be recorded to the register
+				uniquely identified by the letter, and can be replayed with
+				@[a-z]. If you accidentally find yourself activating this
+				feature or you want to stop recording commands, press q in
+				Command Mode.  
+				</li>
+			</ul>
+
+            <p id="header">Advanced: Last Line Mode</p>
+			<ul>
+				<li><u>Jump to Specific Line</u>:
+				If line numbers are not enabled, you may want to enable them in
+				the current Vim session with :set nu, which will make it easier
+				to identify the line number. Type :set nonu to toggle line
+				numbers off. If you want line numbers to be enabled for all Vim
+				sessions, add "set nu" to a Vim configuration file named .vimrc
+				(yes, with the leading .).  Then, to move your cursor to a
+				particular line, enter :X, where X is the line number of
+				interest. Hit Enter to execute command.
+				</li>
+				<li><u>Regular Expressions</u>:
+				The format of regular expressions is s/<pattern>/<string>/g. By
+				including the g at the end of the regular expression, the
+				regular expression will be applied globally to the current
+				line. In other words, it will search and replace all
+				occurrences of the pattern in the
+				line. By removing the g, it will only replace the first
+				occurrence. To apply the same regular expression to multiple
+				lines, add a range before the regular expression, separated by
+				a comma. 
+				</li>
+				<li><u>Search and Replace Using Cursor Location</u>:
+				Instead of using a range of line numbers for regular
+				expressions, you can also use the cursor location. Say you want
+				to insert a comment from line 50 to the last line. You can
+				issue :.,$s/^/#/.  Here, the "." indicates current line, and
+				the dollar symbol ($) indicates the last line. Note that the
+				"." and $ symbols are still separated by a comma, much like
+				when you're using a range of line numbers. To add a comment to
+				the current line and the next 9 lines (i.e., add a comment to
+				10 lines total), use :.,+9s/^/#/. To apply to the current line
+				and the previous 9 lines, use :.,-9s/^/#/.
+				</li>
+				<li><u>Comment Out Multiple Lines</u>:
+				You can use regular expressions to comment out several lines of
+				code, assuming you don't want to use a block comment like in
+				C/C++ (/* multi-lined comment */) or if the programming
+				language doesn't have block comments like in Bash scripting (#
+				comment).  
+				So, to comment out lines 2-10, for example, in Bash, the syntax
+				would be :2,10s/^/#/. The caret symbol here indicates
+				"beginning of line". To comment out these same lines in C/C++,
+				issue the command :2,10s/^/\/\/. When using the forward-slash
+				symbol in regular expressions, you must escape the character
+				(hence the backslash) for it to be interpreted correctly. To
+				remove the comment, issue the command :2,10s/^#//, which says
+				"for every pound symbol at the beginning of the line, replace
+				it with nothing." And, to remove a single-lined comment in
+				C/C++, :2,10s/^\/\///. And a :%s/^/#/ will add a # symbol to
+				every line in the file.
+				</li>
+				<li><u>Delete All Lines in File</u>:
+				Press :%d to delete all lines in the current file. Here, the
+				% symbol represents all lines , and the d indicates delete.
+				</li>
+				<li><u>Edit Additional Files From Current Vim Session</u>:
+				With the current file open in Vim, open additional files in
+				individual buffers with :e filename, where e stands for edit
+				and filename could be an
+				existing file or a new files you would like to create. Buffers
+				are an easy way to cut or copy code from one file to another
+				without having to move away from the keyboard. Another great
+				feature of buffers is that the previous command entered in to
+				file A could easily be applied to file B with the "." command,
+				since history is carried over. Buffers are labeled numerically,
+				starting at one. Switch to the next sequential buffer with :bn.
+				To go back to the previous file, use :bN. Vim will warn you if
+				you have reached either end of the available buffers. You can
+				also jump to a specific buffer with :bX, where X is the number
+				of the buffer of interest. You will not be able to jump to a
+				non-existing buffer. Close open buffers with :bw. Word of
+				caution: w does NOT stand for write, but will ignore any
+				changes. If you want to save your changes, you must first save
+				the file with :w.
+				</li>
+				<li><u>Open Multiple Files</u>:
+				Multiple files can be opened in a single Vim session by listing
+				each filename from the command line separated by a space. Each
+				of these files is opened in a buffer, as described above. You
+				can advance to the next file (buffers are referenced
+				numerically) with :n or :bn, and go back to the previous file
+				with :N or :bN. Close buffers with :bw, but make sure you have
+				saved any changes beforehand. You can also still move between
+				files using the specific buffer number.
+				</li>
+				<li><u>Remove Highlighting</u>:
+				Use :noh (no highlighting) to disable any syntax highlighting
+				in Vim.
+				</li>
+			</ul>
+
+            <p id="header">Advanced: Miscellaneous</p>
+			<ul>
+				<li><u>Remap Esc Key to Caps Lock Key</u>:
+				The Esc key is one of the most commonly used keys to a Vim user
+				since it enables you to switch between Insert and Command Mode.
+				On a typical keyboard, the Esc key is a far stretch from the
+				home keys, which may cause some strain. I decided to remap the
+				Esc key to the Caps Lock key, a key I don't use too often.
+				</li>
+				<li><u>Suspend Vim Session</u>:
+				Temporarily suspend or background your Vim session, returning
+				you to the command line as if you had ended the session. When
+				you open a file in Vim, the OS automatically creates a swap
+				(.swp) file, and when you close the file, the file is deleted.
+				When the swap file exists, Vim will warn you that there is
+				already a copy of the file being edited if you try and open the
+				same file. Return to the Vim session with fg (foreground).
+				</li>
+				<li><u>Visual Mode and Visual Block Mode</u>:
+					<ul>
+						<li>Enter Visual Mode per character with the v key. If
+						you move press the navigation keys, you'll see that
+						your cursor starts highlighting in its past. Any
+						Command Mode keystroke you press will be applied to
+						this highlighted region, so you'll be able to delete or
+						copy the entire block, for example.  
+						</li>
+						<li>Enter Visual Block Mode with ctrl+v. This feature
+						is especially useful for modifying column-formatted text.
+						</li>
+					</ul>
+				</li>
+				<li><u>Formatting Based on Vimrc</u>:
+				I prefer to have every line in Vim to be at max 80 characters
+				wide. When I'm writing text, sometimes my cursor won't
+				automatically wrap the current line, so I reformat it by
+				pressing gqj. Apparently, I could solve this issue and not have
+				to use this command anymore according to this <a href"http://vim.wikia.com/wiki/Automatic_word_wrapping">article</a>, but I have yet to try it out.
+				</li>
+				<li><u>Access Man Pages</u>:
+				Press shift+k on any Bash, UNIX, or system commands (i.e.
+				sleep, printf), or on any include headers to access the Man
+				page without leaving Vim.  Useful if you can't remember which
+				include header is necessary for a particular function.
+				</li>
+			</ul>
+
+            <a name="resources"><p id="header">Other Vim Resources</p></a>
+			<ul>
+				<li><a href="http://www.zdnet.com/article/vim-update-classic-unix-linux-editor-gets-first-update-in-years/">Recent Vim Update</a></li>
+				<li><a href="http://www.viemu.com/vi-vim-cheat-sheet.gif">Keyboard Visualization</a></li>
+				<li><a href="http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm">Various Vim Commands</a></li>
+				<li><a href="http://alvinalexander.com/linux/vim-vi-mode-editor-command-insert-mode">Vim Modes</a></li>
+				<li><a href="http://vimdoc.sourceforge.net/htmldoc/visual.html">Visual Modes</a></li>
+				<li><a href="https://news.ycombinator.com/item?id=12643887">Vim
+Anti-Patterns</a></li>
+				<li><a href="https://vimebook.com/en">Vim for Humans Free
+eBook</a></li>
+				<li><a href="https://github.com/mhinz/vim-galore">Vim Galore</a></li>
+				<li><a href="http://spacevim.org/">SpaceVim</a></li>
+				<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_20.html">The q: Command</a></li>
+			</ul>
+	
+			</div> 
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>

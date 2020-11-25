@@ -1,0 +1,125 @@
+<html>
+
+<head>
+  <title>Stephanie Brink</title>	<!--title of tab-->
+  <link rel="stylesheet" href="Style.css" type="text/css"/>
+  <link href='http://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Trykker' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="top">
+  <h1 id="name">R Tips</h1>
+  <hr>
+  </div>
+
+  <br>
+
+  <div id="table">
+    <table>
+      <tr id="row">
+        <td>
+			<div id="research">
+
+            <p id="header">Table of Contents</p>
+			<ul>
+				<li><a href="R_tips.html#downloads">Downloads</a></li>
+				<li><a href="R_tips.html#nav">Navigation</a></li>
+				<li><a href="R_tips.html#dataframe">Data Frames</a></li>
+				<li><a href="R_tips.html#plots">Plots</a></li>
+				<li><a href="R_tips.html#standards">Code Standards</a></li>
+				<li><a href="R_tips.html#resources">Other Resources</a></li>
+			</ul>
+
+            <a name="downloads"><p id="header">Downloads</p></a>
+			<ul>
+				<li><a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a></li>
+				<li><a href="https://cran.r-project.org/mirrors.html">R Package</a></li>
+			</ul>
+
+            <a name="nav"><p id="header">Naviation</p></a>
+			<ul>
+				<li>ls(): List known variables and functions definitions.</li>
+				<li>getwd(): Return current working directory.</li>
+				<li>setwd("path"): Change current working directory to
+				specified path enclosed by quotes.</li>
+				<li>?cmd: Access man pages for built-in R functions and
+				commands.</li>
+			</ul>
+
+            <a name="dataframes"><p id="header">Data Frames</p></a>
+			<ul>
+				<li><u>Create from file</u>:
+				<ul>
+					<li>read.table()</li>
+					<li>read.csv()</li>
+				</ul>
+				<li><u>Manipulate</u>:
+				<ul>
+					<li>Double vs Single Brackets</li>
+					<li>which()</li>
+					<li>match()</li>
+					<li>for (i in 1:10) {}</li>
+				</ul>
+				</li>
+			</ul>
+
+            <a name="plots"><p id="header">Plots</p></a>
+			<ul>
+				<li><u>Formatting</u>:
+				<ul>
+					<li>cex.main: Increase font size of chart title. Default is
+					1.</li>
+					<li>cex.axis: Increase font size of axes tick lables.
+					Default is 1.</li>
+					<li>cex.lab: Increase font size of axes labels. Default is
+					1.</li>
+					<li>mar: Set margin size with a vector of length 4. First
+					value specifies bottom margin, and move clockwise (to the
+					left). Default setting is c(4.1, 5.1, 5.1, 2.1), which can
+					be checked with par("mar").</li> 
+					<li>oma</li>
+					<li>mfrow: Enable multiple plots in the same window with a
+					vector of the form c(nrows,ncols). Default is c(1,1).</li>
+					<li>xpd: Enable plotting outside plot region, useful for
+					when you want to put the legend outside the bounded box.
+					Can toggle between TRUE and FALSE when you wish. Default
+					value is FALSE, so all plots are restricted to plot region.
+				</ul>
+				<li><u>Legend</u>:
+				<ul>
+					<li>legend()</li>
+					<li>bty: Toggle outline of legend on ("y") and off ("n").
+					Default is on.</li>
+					<li>ncol: Force horizontal legend by specifying number of
+					desired columns. Default number of columns is 1.</li>
+					<li>cex: Increase font size.</li>
+					<li>title: Add a title to the top of the legend.</li>
+				</ul>
+				</li>
+			</ul>
+
+            <a name="standards"><p id="header">Programming Common Pratices</p></a>
+			<ul>
+				<li><a href="https://google.github.io/styleguide/Rguide.xml">Google's R Style Guide</a></li>
+			</ul>
+
+            <a name="resources"><p id="header">R Resources</p></a>
+			<ul>
+				<li><a href="https://www.r-project.org">R Home Page</a></li>
+				<li><a href="https://www.rstudio.com">R GUI Interface</a></li>
+				<li><a href="https://www.coursera.org/learn/r-programming/">Free Intro to R Course</a></li>
+				<li><a href="http://www.r-graph-gallery.com">See Ideas for Graphs</a></li>
+				<li><a href="http://r4ds.had.co.nz/">R for Data Science eBook</a></li>
+				<li><a href="http://www.studytrails.com/r/15-page-tutorial-for-r/">R Tutorials</a></li>
+			</ul>
+	
+			</div> 
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>
